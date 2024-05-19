@@ -1,0 +1,11 @@
+﻿*0000-FFFF	00				;	SET ALL MEMORY TO $00
+
+*FFFA		F0 FF			;	SET NMI VECTOR
+			00 04			;	SET RESET VECTOR
+			F0 FF			;	SET BRK VECTOR
+
+*FFF0		40				;	RTI >> Return Interrupt
+
+*0400		A9 00			;	LDA #$00
+			A9 40			;	LDA #$40
+			A9 80			;	LDA #$80
